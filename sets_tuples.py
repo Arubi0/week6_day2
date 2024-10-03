@@ -101,30 +101,30 @@ The only verdict is vengeance; a vendetta, held as a votive, not in vain, for th
 vindicate the vigilant and the virtuous.
 
 
-Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
-and you may call me V."""
+# Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
+# and you may call me V."""
 
 
-# Convert the text to a tuple of characters
-text_tuple = tuple(text)
-
-
-
-# Tuple to store the target characters
-small_v = text_tuple.count("v")
-big_v = text_tuple.count("V")
+# # Convert the text to a tuple of characters
+# text_tuple = tuple(text)
 
 
 
-# Count occurrences of 'v' or 'V' by filtering the text_tuple
+# # Tuple to store the target characters
+# small_v = text_tuple.count("v")
+# big_v = text_tuple.count("V")
 
-print(small_v + big_v)
+
+
+# # Count occurrences of 'v' or 'V' by filtering the text_tuple
+
+# print(small_v + big_v)
 
 
 
-# Output the result
+# # Output the result
 
-53
+# 53
 
 
 # dictionarys Accessing a Value from a Nested List###############################
@@ -137,22 +137,34 @@ sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(len(sample_list)) # Output: 3
 #this is called a nested list
 # Extract and print the second element from the first list
-
+print(sample_list[0][1]) #output:2
+print(sample_list[1][2]) #output:6
+print(sample_list[2][0]) #output:7
+print(sample_list[2][2]) #output:9
+print(sample_list[0][0]) #output:1
+print(sample_list[2][1]) #output:8
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
 # Extract and print the second fruit from the list
+print(sample_list_of_fruit["fruits"][1]) #output: "banana"
+print(sample_list_of_fruit["fruits"][2]) #output: "cherry"
+print(sample_list_of_fruit["fruits"][0]) #output: "apple"
 
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
-
+print(sample_list_of_lists["lists"][1][2]) #output:6
+print(sample_list_of_lists["lists"][2][1]) #output:8
+print(sample_list_of_lists["lists"][0][2]) #output:3
+print(sample_list_of_lists["lists"][2][1]) #output:7
 
 
 
 sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
-
-
+print(sample_list_of_dicts["dicts"][1]["age"]) #output:30
+print(sample_list_of_dicts["dicts"][2]["name"]) #Output: Charlie
+print(sample_list_of_dicts["dicts"][0]["age"]) #output:25
 
 
 
@@ -162,6 +174,10 @@ data = {
     "prices": {"mango": 1.5, "pineapple": 2.5, "banana": 0.5}
 }
 
+print(data["fruits"]["tropical"][1]) #output: pineapple
+print(data["fruits"]["berries"][2])# output: raspberry
+print(data["prices"]["mango"]) #output: 1.5
+print(data["prices"]["banana"]) #output: 0.5
 
 # Extract and print the second item from the 'tropical' list
 print(data["fruits"]["tropical"][1])  # Output: 'pineapple'
@@ -178,7 +194,9 @@ info = {
 
 # Extract and print the coach's name
 print(info["team"]["coach"]["name"])  # Output: 'John Doe'
-
+print(info["team"]["coach"]["age"]) #output: 45
+print(info["team"]["players"][2]) #output: Charlie
+print(info["location"]) #output: New York
 
 
 
@@ -189,16 +207,20 @@ company = {
             "employees": ["Emma", "Oliver", "Sophia"],
             "budget": 50000
         },
-        "Engineering": {
+        "engineering": {
             "employees": ["Liam", "Noah", "Ethan"],
             "budget": 120000
         }
     }
 }
 
+print(company["departments"]["engineering"]["budget"]) #output:120000
+budget1 = (company["departments"]["engineering"]["budget"])
+budget2 = (company["departments"]["HR"]["budget"])
+print(budget1 + budget2) #output 170000
 
 # Extract and print the second employee from the 'Engineering' department
-print(company["departments"]["Engineering"]["employees"][1])  # Output: 'Noah'
+print(company["departments"]["engineering"]["employees"][1])  # Output: 'Noah'
 
 
 # Define the dictionary
